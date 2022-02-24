@@ -1,4 +1,5 @@
 import collections
+import sys
 class debuger:
     def __init__(self) -> None:
         self.watch=list()
@@ -6,6 +7,8 @@ class debuger:
         print("-----------------")
         print("|  version 0.1  |")
         print("-----------------")
+    def showOSversion(self):
+        print(sys.version)
     def vla(self,*new):
         for t in list(new):
             self.watch.append(t)
@@ -28,3 +31,6 @@ class debuger:
         linux=["< Hello, linux world!  >"," -----------------------","   \ ","    \ ",
         "        .--.","       |o_o |","       |:_/ |","      //   \ \ ","     (|     | )","    /'\_   _/`\ ","    \___)=(___/"]
         for t in linux:print(t)
+    def me(self,value):
+        return sys.getsizeof(value)
+    
